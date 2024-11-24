@@ -1,0 +1,5 @@
+name: StatusModule
+version: '${project.version}'
+description: Configure the Bots StatusModule and Activity
+author: sieadev
+priority: DEFAULT

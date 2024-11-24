@@ -1,0 +1,5 @@
+name: Counting
+version: '${project.version}'
+description: Sets up a simple counting system
+author: sieadev
+priority: DEFAULT
