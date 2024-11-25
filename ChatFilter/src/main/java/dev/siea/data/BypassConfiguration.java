@@ -15,11 +15,6 @@ public record BypassConfiguration(Set<Permission> bypassPermissions, Set<String>
 
     }
 
-    public BypassConfiguration(Set<Permission> bypassPermissions, Set<String> ignoredChannels) {
-        this.bypassPermissions = bypassPermissions;
-        this.ignoredChannels = ignoredChannels;
-    }
-
     public Set<Permission> bypassPermissions() {
         return this.bypassPermissions;
     }

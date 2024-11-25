@@ -11,12 +11,6 @@ public record Punishment(PunishmentType type, int duration, String message) {
         this(PunishmentType.valueOf(config.getString("type", "WARN").toUpperCase()), config.getInt("duration", 0), config.getString("message", ""));
     }
 
-    public Punishment(PunishmentType type, int duration, String message) {
-        this.type = type;
-        this.duration = duration;
-        this.message = message;
-    }
-
     public void punish(Member member, Logger logger) {
         try {
             switch (this.type) {
@@ -24,17 +18,14 @@ public record Punishment(PunishmentType type, int duration, String message) {
                 case KICK -> member.kick().queue();
                 case TIMEOUT -> member.timeoutFor(Duration.ofSeconds(this.duration)).queue();
             }
-        } catch (Exception var4) {
-            logger.info("Unable to punish member with ID: {}. {}", member.getId(), var4.getMessage());
+        } catch (Exception e) {
+            logger.info("Unable to punish member with ID: {}. {}", member.getId(), e.getMessage());
             return;
         }
 
         if (!this.message.isEmpty()) {
-            member.getUser().openPrivateChannel().flatMap((channel) -> {
-                return channel.sendMessage(this.message);
-            }).queue();
+            member.getUser().openPrivateChannel().flatMap((channel) -> channel.sendMessage(this.message)).queue();
         }
-
     }
 
     public PunishmentType type() {

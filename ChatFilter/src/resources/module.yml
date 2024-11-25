@@ -1,0 +1,5 @@
+name: ChatFilter
+version: '${project.version}'
+description: Adjustable and fast chat filter system
+authors: [sieadev]
+priority: DEFAULT

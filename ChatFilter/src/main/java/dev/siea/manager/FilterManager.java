@@ -18,7 +18,7 @@ import org.simpleyaml.configuration.file.FileConfiguration;
 import org.slf4j.Logger;
 
 public class FilterManager extends ListenerAdapter {
-    private final List<Filter> filters = new ArrayList();
+    private final List<Filter> filters = new ArrayList<>();
     private final BypassConfiguration bypassConfig;
 
     public FilterManager(ChatFilter module) {
@@ -35,7 +35,7 @@ public class FilterManager extends ListenerAdapter {
 
                 while(var3.hasNext()) {
                     Permission permission = (Permission)var3.next();
-                    if (member.hasPermission(new Permission[]{permission})) {
+                    if (member.hasPermission(permission)) {
                         return;
                     }
                 }
