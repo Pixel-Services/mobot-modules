@@ -11,7 +11,7 @@ import net.dv8tion.jda.api.managers.channel.concrete.VoiceChannelManager;
 public class VoiceChat {
     private final VoiceChannel channel;
     private String ownerId;
-    private final List<String> connectedUsers = new ArrayList();
+    private final List<String> connectedUsers = new ArrayList<>();
 
     public VoiceChat(VoiceChannel channel, Member creator) {
         this.channel = channel;

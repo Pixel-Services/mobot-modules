@@ -3,7 +3,6 @@ package dev.siea.guild;
 import dev.siea.QuickVoice;
 import dev.siea.listeners.VoiceChatListener;
 import java.util.HashMap;
-import java.util.Iterator;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.channel.concrete.Category;

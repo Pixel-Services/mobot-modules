@@ -1,0 +1,54 @@
+#################################################################
+# +-----------------------------------------------------------+ #
+# |                         ChatFilter                        | #
+# |                  Made with <3 by sieadev                  | #
+# +-----------------------------------------------------------+ #
+#################################################################
+
+# -------------------------- General -------------------------- #
+# roles that bypass the chat filter
+bypass-permissions: [ADMINISTRATOR]
+ignored-channels: []
+
+# ------------------------ Word Filter ------------------------ #
+# The word filter will detect messages that contain blacklisted words
+word-filter:
+  enabled: true
+  action:
+    delete: true
+    punishment:
+      type: WARN
+      message: 'You were muted for using inappropriate language.'
+  blacklist:
+    - 'verybadword'
+    - 'extremlybadword'
+    - 'insanelybadword'
+
+# ---------------------------- Spam --------------------------- #
+# The spam filter will detect messages that are considered spam
+spam-detection:
+  enabled: true
+  max-messages: 3
+  action:
+    delete: true
+    punishment:
+      type: TIMEOUT
+      duration: 60
+      message: 'You were muted for spamming.'
+
+# --------------------------- Links --------------------------- #
+# The link filter will detect messages that contain unwanted links
+# You may choose between a blacklist or a whitelist
+link-filter:
+  enabled: true
+  mode: BLACKLIST
+  action:
+    delete: true
+    punishment:
+      type: TIMEOUT
+      duration: 300
+      message: 'You were muted for sending blacklisted links.'
+  list:
+    - 'inappropriate.link'
+    - 'link.bad'
+    - 'maliciouslink.com'
