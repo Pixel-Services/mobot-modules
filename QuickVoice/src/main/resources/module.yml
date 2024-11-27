@@ -1,5 +1,5 @@
-name: ChatFilter
+name: QuickVoice
 version: '${project.version}'
-description: Adjustable and fast chat filter system
-author: sieadev
+description: Adjustable and efficient voice chat system
+authors: [sieadev]
 priority: DEFAULT
