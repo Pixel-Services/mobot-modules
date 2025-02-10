@@ -11,4 +11,10 @@
     <name>moderation</name>
     <artifactId>Moderation</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.pixelservices</groupId>
+            <artifactId>mobot-api</artifactId>
+        </dependency>
+    </dependencies>
 </project>

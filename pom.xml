@@ -13,6 +13,14 @@
     <module>ticket-system</module>
   </modules>
 
+  <repositories>
+    <repository>
+      <id>pixel-services-releases</id>
+      <name>Pixel Services</name>
+      <url>https://maven.pixel-services.com/releases</url>
+    </repository>
+  </repositories>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
