@@ -1,4 +1,15 @@
 package com.pixelservices;
 
-public class Moderation {
+import com.pixelservices.api.modules.MbModule;
+
+public class Moderation extends MbModule {
+    @Override
+    public void onEnable() {
+
+    }
+
+    @Override
+    public void onDisable() {
+
+    }
 }
