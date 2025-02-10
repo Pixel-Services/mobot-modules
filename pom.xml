@@ -11,6 +11,7 @@
   <modules>
     <module>moderation</module>
     <module>ticket-system</module>
+    <module>embed-generator</module>
   </modules>
 
   <repositories>

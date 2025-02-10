@@ -1,0 +1,7 @@
+name: EmbedGenerator
+version: '${project.version}'
+main: dev.siea.EmbedGenerator
+authors: ["Pixel Services", "Relism"]
+license: "MIT"
+description: "Generate embeds easily through a simple command."
+dependencies: []
