@@ -12,6 +12,7 @@
     <module>moderation</module>
     <module>ticket-system</module>
     <module>embed-generator</module>
+    <module>console-link</module>
   </modules>
 
   <repositories>

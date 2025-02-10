@@ -1,0 +1,7 @@
+name: ConsoleLink
+version: '${project.version}'
+main: dev.siea.ConsoleLink
+authors: ["Pixel Services", "Sieadev"]
+license: "MIT"
+description: "Link your console to a Channel server!"
+dependencies: []
