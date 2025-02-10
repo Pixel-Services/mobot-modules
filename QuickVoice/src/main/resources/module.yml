@@ -1,6 +1,0 @@
-name: QuickVoice
-version: '${project.version}'
-description: Adjustable and efficient voice chat system
-authors: [sieadev]
-priority: DEFAULT
-mainClass: dev.siea.QuickVoice

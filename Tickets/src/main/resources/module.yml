@@ -1,5 +1,0 @@
-name: Tickets
-version: '${project.version}'
-description: Outofthebox ticketing system
-author: sieadev
-priority: DEFAULT

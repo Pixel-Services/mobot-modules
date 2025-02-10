@@ -1,0 +1,7 @@
+name: Moderation
+version: '${project.version}'
+main: dev.siea.Moderation
+authors: ["Pixel Services", "SamVolvo"]
+license: "MIT"
+description: "An advanced Ticket System made by Pixel Services"
+dependencies: []

@@ -1,5 +1,0 @@
-name: ConsoleLink
-version: '${project.version}'
-description: ConsoleLink is a module that allows you to link your console to a discord channel
-authors: [sieadev]
-priority: VERY_HIGH
