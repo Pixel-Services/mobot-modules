@@ -1,0 +1,7 @@
+name: Welcome
+version: '${project.version}'
+main: com.pixelservices.Welcome
+authors: ["Pixel Services", "SamVolvo"]
+license: "MIT"
+description: "Custom Welcome Messages for your server!"
+dependencies: []
