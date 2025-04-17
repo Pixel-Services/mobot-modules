@@ -11,14 +11,13 @@ public class Welcome extends MbModule {
     private ShardManager shardManager;
     private EmbedUtil embedUtil;
     private PluginConfig config;
-    private PluginConfig embedConfig;
 
     @Override
     public void onEnable() {
         getLogger().debug("Enabling Welcome.");
 
-        embedConfig = getConfig("embeds.yml");
-        embedConfig.save();
+        config = getDefaultConfig();
+        saveDefaultConfig();
 
 
         shardManager = getBotEnvironment().getShardManager();
@@ -53,9 +52,5 @@ public class Welcome extends MbModule {
 
     public PluginConfig getConfig() {
         return config;
-    }
-
-    public PluginConfig getEmbedConfig() {
-        return embedConfig;
     }
 }
