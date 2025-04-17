@@ -29,7 +29,7 @@
       <dependency>
         <groupId>com.pixelservices</groupId>
         <artifactId>mobot-api</artifactId>
-        <version>0.3.6c-ALPHA</version>
+        <version>0.3.8</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
