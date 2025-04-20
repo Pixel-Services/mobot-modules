@@ -16,6 +16,12 @@
     <module>welcome</module>
   </modules>
 
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <repositories>
     <repository>
       <id>pixel-services-releases</id>
@@ -30,6 +36,7 @@
         <groupId>com.pixelservices</groupId>
         <artifactId>mobot-api</artifactId>
         <version>0.3.8</version>
+        <scope>provided</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
