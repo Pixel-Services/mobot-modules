@@ -1,6 +1,6 @@
-name: Moderation
+name: TicketSystem
 version: '${project.version}'
-main: dev.siea.Moderation
+main: com.pixelservices.TicketSystem
 authors: ["Pixel Services", "SamVolvo"]
 license: "MIT"
 description: "An advanced Ticket System made by Pixel Services"

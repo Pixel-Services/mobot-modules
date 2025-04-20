@@ -4,3 +4,13 @@
 # |        Made with <3 by SamVolvo at Pixel Services         | #
 # +-----------------------------------------------------------+ #
 #################################################################
+
+
+# The names that the category will be searched for or create them if not found.
+names:
+# This category will store all open tickets and the ticket channel.
+  ticket-category: "📩Tickets📩"
+# The category the tickets will be stored when closed.
+  archive-category: "📦Archive📦"
+# In this channel the member will be able to press a button to create a ticket.
+  ticket-channel: "➕Ticket➕"

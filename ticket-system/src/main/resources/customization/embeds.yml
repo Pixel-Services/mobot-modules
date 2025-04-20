@@ -1,0 +1,133 @@
+#################################################################
+# +-----------------------------------------------------------+ #
+# |                       Ticket System                       | #
+# |        Made with <3 by SamVolvo at Pixel Services         | #
+# +-----------------------------------------------------------+ #
+#################################################################
+
+
+#                 layout of an embed.
+
+#       Author                         Thubnail
+#       Title
+#       Description
+#       Fields
+#       Images
+#       Footer                         Timestamp
+
+
+# These embeds support the following placeholders:
+
+# %username%  | The username of the member (Embeds that will be called by users. ex: When a ticket opens)
+# %userid%    | The id of the member (Embeds that will be called by users. ex: When a ticket opens)
+# %usericon%  | The iconLink of the member (Embeds that will be called by users. ex: When a ticket opens in the author icon.)
+# %guildname% | The name of the guild (Server).
+# %guildid%   | The id of the guild.
+# %guildicon% | The icon of the guild. (Only on link locations. ex: author icon or footer icon)
+
+embeds:
+# Support ticket
+  normal_ticket:
+# if true the bot will send the embed in the ticket channel. (True / false)
+    enabled: true
+#Set the color of the left side of the embed.
+    color:
+# Only use HEX codes find them for example on "https://www.w3schools.com/colors/colors_picker.asp"
+      hex-code: "#4EFFD2"
+    author:
+# The text that will be shown on the location of the author. (Required if url!)
+      text: "%guildname%"
+# The url what will be opened when the user clicks on the author text.
+      url: "https://pixel-services.com"
+# The icon that will be shown next to the author text. (link)
+      icon: "https://archive.org/download/discordprofilepictures/discordblue.png"
+    thubnail:
+# Image that will be shown on the right of the embed. (link)
+      image: "https://www.pngkey.com/png/full/242-2426185_support-icon-customer-service-icon-png.png"
+    title:
+# The text that will be shown on the location of the Title (Required if url!)
+      text: "Create a Support Ticket."
+# The url what will be opened when the user clicks on the title.
+      url: "https://pixel-services.com"
+    description:
+# Text that will be shown on the location of the description.
+      text: "Click the button bellow to create a support Ticket."
+# Add as many fields you like. (1 required, Can be empty and will not show.)
+    fields:
+# The name of the field
+      - name: "Rules"
+# The value of the field
+        value: "Follow the server guidelines!"
+# Do you allow it to be 3 in one line or only 1 in one? (true / false)
+        inline: false
+      - name: "Need some help?"
+        value: "Comme talk with us."
+        inline: true
+      - name: "Price?"
+        value: "Its free!"
+        inline: true
+    image:
+# Image that will be shown on the bottom of the embed. (link)
+      image: ""
+    footer:
+# Text that will be shown on the bottom of the embed.
+      text: "Powered by Mobot"
+# The icon that will be shown next to the author text. (link)
+      icon: "https://archive.org/download/discordprofilepictures/discordblue.png"
+    timestamp:
+# Do you want the timestamp enabled? (true / false)
+      enabled: true
+# Ticket opening
+  ticket-info:
+    enabled: true
+    color:
+      hex-code: '#4EFFD2'
+    author:
+      text: '%username%''s ticket'
+      url: "https://pixel-services.com"
+      icon: '%usericon%'
+    thubnail:
+      image: ''
+    title:
+      text: "Support Ticket"
+      url: 'https://pixel-services.com'
+    description:
+      text: "U opened a support ticket."
+    fields:
+      - name: "Be patient!"
+        value: "Staff will be with you shortly."
+        inline: false
+    image:
+      image: ''
+    footer:
+      text: "Powered by Pixel-Services"
+      icon: "https://archive.org/download/discordprofilepictures/discordblue.png"
+    timestamp:
+      enabled: true
+# Embed that will be sent when a ticket closes
+  ticket-close:
+    enabled: true
+    color:
+      hex-code: '#4EFFD2'
+    author:
+      text: '%guildname%'
+      url: "https://pixel-services.com"
+      icon: '%guildicon%'
+    thubnail:
+      image: ''
+    title:
+      text: "Ticket Closed"
+      url: 'https://pixel-services.com'
+    description:
+      text: "This ticket has been closed by %username%"
+    fields:
+      - name: ""
+        value: ""
+        inline: false
+    image:
+      image: ''
+    footer:
+      text: "Powered by Pixel-Services"
+      icon: "https://archive.org/download/discordprofilepictures/discordblue.png"
+    timestamp:
+      enabled: true

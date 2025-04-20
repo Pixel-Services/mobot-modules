@@ -1,0 +1,7 @@
+name: MultiStatus
+version: '${project.version}'
+main: com.pixelservices.MultiStatus
+authors: ["Pixel Services", "SamVolvo"]
+license: "MIT"
+description: "An advanced Multi Status tool made by Pixel Services"
+dependencies: []

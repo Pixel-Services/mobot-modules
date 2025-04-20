@@ -2,14 +2,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <name>welcome</name>
+    <artifactId>Welcome</artifactId>
+    <version>1.0.1</version>
+
     <parent>
         <groupId>com.pixelservices</groupId>
         <artifactId>mobot-modules</artifactId>
         <version>1.0.0</version>
     </parent>
-
-    <name>welcome</name>
-    <artifactId>Welcome</artifactId>
 
     <dependencies>
         <dependency>

@@ -1,0 +1,15 @@
+#################################################################
+# +-----------------------------------------------------------+ #
+# |                        MultiStatus                        | #
+# |        Made with <3 by SamVolvo at Pixel Services         | #
+# +-----------------------------------------------------------+ #
+#################################################################
+
+status:
+# list of the statusses. (can be from 1 to ∞)
+  list:
+    - "MultiStatus"
+    - "Set-up in config.yml"
+    - "Made by SamVolvo"
+# Time in seconds before the switch
+  time: 5

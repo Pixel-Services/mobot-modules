@@ -1,10 +1,12 @@
 package com.pixelservices.utils;
 
 import com.pixelservices.TicketSystem;
+import com.pixelservices.data.EmbedData;
 import com.pixelservices.plugin.configuration.PluginConfig;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 
+import java.awt.*;
 import java.time.Instant;
 import java.util.List;
 import java.util.Map;
@@ -15,46 +17,52 @@ public class EmbedUtil {
 
     public EmbedUtil(TicketSystem module){
         this.module = module;
-        config = module.getConfig("customization/embed.yml");
+        config = module.getConfig("customization/embeds.yml");
     }
 
-    public MessageEmbed customEmbed(String embedName){
+    public MessageEmbed customEmbed(String embedName, EmbedData embedData){
         EmbedBuilder embed = new EmbedBuilder();
-        String search = embedName + ".";
+        String search = "embeds." + embedName + ".";
 
+        String authorText = module.getPlaceholders().checkEmbedPlaceHolders(config.getString(search + "author.text"), embedData);
         String authorUrl = config.getString(search + "author.url");
-        String authorText = config.getString(search + "author.text");
         String authorIcon;
         String thubnailImage = config.getString(search + "thubnail.image");
-        String titleText = config.getString(search + "title.text");
+        String titleText = module.getPlaceholders().checkEmbedPlaceHolders(config.getString(search + "title.text"), embedData);
         String titleURL = config.getString(search + "title.url");
-        String descriptionText = config.getString(search + "decription.text");
+        String descriptionText = module.getPlaceholders().checkEmbedPlaceHolders(config.getString(search + "description.text"), embedData);
         List<Map<String, Object>> fields = (List<Map<String, Object>>) config.get(search + "fields");
         String imageURL = config.getString(search + "image.image");
-        String footerText = config.getString(search + "footer.text");
+        String footerText = module.getPlaceholders().checkEmbedPlaceHolders(config.getString(search + "footer.text"), embedData);
         String footerIcon;
         boolean timeStamp = config.getBoolean(search + "timestamp.enabled");
 
         if (config.getString(search + "author.icon") != null && !config.getString(search + "author.icon").isEmpty()){
-            authorIcon = config.getString(search + "author.icon");
+            authorIcon = module.getPlaceholders().checkEmbedPlaceHolders(config.getString(search + "author.icon"), embedData) ;
         }else{
-            authorIcon = null;
+            authorIcon = "https://th.bing.com/th/id/OIP.klzJHptpCAiuyVNQ9EUumgAAAA?rs=1&pid=ImgDetMain";
         }
 
         if (config.getString(search + "footer.icon") != null && !config.getString(search + "footer.icon").isEmpty()){
-            footerIcon = config.getString(search + "footer.icon");
+            footerIcon = module.getPlaceholders().checkEmbedPlaceHolders(config.getString(search + "footer.icon"), embedData);
         }else{
-            footerIcon = null;
+            footerIcon = "https://th.bing.com/th/id/OIP.klzJHptpCAiuyVNQ9EUumgAAAA?rs=1&pid=ImgDetMain";
         }
-
-
 
         // adding author to the embed.
         if (authorText != null && !authorText.isEmpty()){
             if (authorUrl != null && !authorUrl.isEmpty()){
-                embed.setAuthor(authorText, authorUrl, authorIcon);
+                if (authorIcon != null && (authorIcon.startsWith("http://") || authorIcon.startsWith("https://"))){
+                    embed.setAuthor(authorText, authorUrl, authorIcon);
+                }else{
+                    embed.setAuthor(authorText, authorUrl);
+                }
             }else{
-                embed.setAuthor(authorText, null, authorIcon);
+                if (authorIcon != null && (authorIcon.startsWith("http://") || authorIcon.startsWith("https://"))){
+                    embed.setAuthor(authorText, null, authorIcon);
+                }else{
+                    embed.setAuthor(authorText, null);
+                }
             }
         }
 
@@ -78,13 +86,15 @@ public class EmbedUtil {
         }
 
         // adding fields to the embed.
-        if (fields != null && !fields.isEmpty()){
+        if (fields != null && !fields.isEmpty()) {
             for (Map<String, Object> field : fields) {
-                String name = (String) field.get("name");
-                String value = (String) field.get("value");
+                String name = module.getPlaceholders().checkEmbedPlaceHolders((String) field.get("name"), embedData);
+                String value = module.getPlaceholders().checkEmbedPlaceHolders((String) field.get("value"), embedData);
                 boolean inline = field.get("inline") != null && (boolean) field.get("inline");
 
-                embed.addField(name, value, inline);
+                if (name != null && !name.isEmpty() && value != null && !value.isEmpty()) {
+                    embed.addField(name, value, inline);
+                }
             }
         }
 
@@ -104,6 +114,10 @@ public class EmbedUtil {
 
         if (timeStamp){
             embed.setTimestamp(Instant.now());
+        }
+
+        if (config.getString(search + "color.hex-code") != null && !config.getString(search + "color.hex-code").isEmpty()){
+            embed.setColor(Color.decode(config.getString(search + "color.hex-code")));
         }
 
         return embed.build();

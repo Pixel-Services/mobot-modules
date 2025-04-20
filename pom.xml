@@ -14,6 +14,7 @@
     <module>embed-generator</module>
     <module>console-link</module>
     <module>welcome</module>
+      <module>MultiStatus</module>
   </modules>
 
   <repositories>
@@ -29,7 +30,7 @@
       <dependency>
         <groupId>com.pixelservices</groupId>
         <artifactId>mobot-api</artifactId>
-        <version>0.3.8</version>
+        <version>0.3.9</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
