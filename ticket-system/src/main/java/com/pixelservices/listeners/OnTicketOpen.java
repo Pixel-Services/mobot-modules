@@ -45,7 +45,7 @@ public class OnTicketOpen extends ModuleListener {
             User user = event.getUser();
             EmbedData data = new EmbedData(user, guild);
 
-            // Code stops here for no reason! ask Siea.
+            // Proceeding to send a message to the ticket channel. Ensure all required objects are initialized correctly.
            ticket.sendMessage(module.getRoleCache().getSupporter().getAsMention())
                     .addEmbeds(module.getEmbedUtil().customEmbed("ticket-info", data))
                     .setActionRow(Button.danger("close-ticket", "Close"))
