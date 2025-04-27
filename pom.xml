@@ -28,9 +28,9 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.pixelservices</groupId>
+        <groupId>com.pixelservices.mobot</groupId>
         <artifactId>mobot-api</artifactId>
-        <version>0.3.9</version>
+        <version>0.4.5</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

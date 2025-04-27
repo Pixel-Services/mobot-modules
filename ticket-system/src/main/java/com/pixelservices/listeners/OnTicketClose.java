@@ -2,16 +2,16 @@ package com.pixelservices.listeners;
 
 import com.pixelservices.TicketSystem;
 import com.pixelservices.data.EmbedData;
+import com.pixelservices.mobot.api.modules.listener.ModuleListener;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.Role;
 import net.dv8tion.jda.api.entities.channel.concrete.Category;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent;
-import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
-public class OnTicketClose extends ListenerAdapter {
+public class OnTicketClose extends ModuleListener {
     private TicketSystem module;
 
     public OnTicketClose(TicketSystem module){

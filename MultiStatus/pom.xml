@@ -30,7 +30,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.pixelservices</groupId>
+            <groupId>com.pixelservices.mobot</groupId>
             <artifactId>mobot-api</artifactId>
         </dependency>
     </dependencies>

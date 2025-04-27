@@ -1,7 +1,7 @@
 package com.pixelservices;
 
-import com.pixelservices.api.modules.MbModule;
 import com.pixelservices.events.OnMemberJoin;
+import com.pixelservices.mobot.api.modules.MbModule;
 import com.pixelservices.plugin.configuration.PluginConfig;
 import com.pixelservices.utils.EmbedUtil;
 import net.dv8tion.jda.api.sharding.ShardManager;

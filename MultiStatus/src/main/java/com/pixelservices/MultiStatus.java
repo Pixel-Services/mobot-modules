@@ -1,6 +1,6 @@
 package com.pixelservices;
 
-import com.pixelservices.api.modules.MbModule;
+import com.pixelservices.mobot.api.modules.MbModule;
 import com.pixelservices.plugin.configuration.PluginConfig;
 import net.dv8tion.jda.api.entities.Activity;
 

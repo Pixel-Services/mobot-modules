@@ -2,6 +2,7 @@ package com.pixelservices.listeners;
 
 import com.pixelservices.TicketSystem;
 import com.pixelservices.data.EmbedData;
+import com.pixelservices.mobot.api.modules.listener.ModuleListener;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.User;
@@ -15,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.TimeUnit;
 
-public class OnTicketOpen extends ListenerAdapter {
+public class OnTicketOpen extends ModuleListener {
     private TicketSystem module;
 
     public OnTicketOpen(TicketSystem module){

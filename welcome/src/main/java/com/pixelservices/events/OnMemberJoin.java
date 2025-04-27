@@ -1,6 +1,7 @@
 package com.pixelservices.events;
 
 import com.pixelservices.Welcome;
+import com.pixelservices.mobot.api.modules.listener.ModuleListener;
 import com.pixelservices.plugin.configuration.PluginConfig;
 import com.pixelservices.plugin.configuration.YamlPluginConfig;
 import net.dv8tion.jda.api.entities.Member;
@@ -11,7 +12,7 @@ import net.dv8tion.jda.api.events.guild.member.GuildMemberRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
-public class OnMemberJoin extends ListenerAdapter {
+public class OnMemberJoin extends ModuleListener {
     private Welcome module;
     private PluginConfig config;
 

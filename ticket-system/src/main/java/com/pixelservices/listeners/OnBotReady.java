@@ -2,6 +2,7 @@ package com.pixelservices.listeners;
 
 import com.pixelservices.TicketSystem;
 import com.pixelservices.data.EmbedData;
+import com.pixelservices.mobot.api.modules.listener.ModuleListener;
 import com.pixelservices.plugin.configuration.PluginConfig;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Guild;
@@ -13,7 +14,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
 import org.jetbrains.annotations.NotNull;
 
-public class OnBotReady extends ListenerAdapter {
+public class OnBotReady extends ModuleListener {
     private TicketSystem module;
 
     public OnBotReady(TicketSystem module){
