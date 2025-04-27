@@ -27,7 +27,7 @@ public class EmbedUtil {
         String authorText = module.getPlaceholders().checkEmbedPlaceHolders(config.getString(search + "author.text"), embedData);
         String authorUrl = config.getString(search + "author.url");
         String authorIcon;
-        String thubnailImage = config.getString(search + "thubnail.image");
+        String thumbnailImage = config.getString(search + "thubnail.image");
         String titleText = module.getPlaceholders().checkEmbedPlaceHolders(config.getString(search + "title.text"), embedData);
         String titleURL = config.getString(search + "title.url");
         String descriptionText = module.getPlaceholders().checkEmbedPlaceHolders(config.getString(search + "description.text"), embedData);
