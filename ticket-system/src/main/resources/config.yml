@@ -6,7 +6,7 @@
 #################################################################
 
 
-# The names that the category will be searched for or create them if not found.
+# The names that will be used to search for or create a category if not found.
 names:
 # This category will store all open tickets and the ticket channel.
   ticket-category: "📩Tickets📩"
