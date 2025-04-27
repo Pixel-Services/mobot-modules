@@ -38,6 +38,10 @@ public class OnTicketOpen extends ModuleListener {
                ticket = createTicket(event, category);
             }
 
+            if (ticket == null){
+                return;
+            }
+
             User user = event.getUser();
             EmbedData data = new EmbedData(user, guild);
 
