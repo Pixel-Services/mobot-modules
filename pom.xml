@@ -14,13 +14,8 @@
     <module>embed-generator</module>
     <module>console-link</module>
     <module>welcome</module>
+      <module>MultiStatus</module>
   </modules>
-
-  <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
 
   <repositories>
     <repository>
@@ -33,10 +28,9 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.pixelservices</groupId>
+        <groupId>com.pixelservices.mobot</groupId>
         <artifactId>mobot-api</artifactId>
-        <version>0.3.8</version>
-        <scope>provided</scope>
+        <version>0.4.5</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
